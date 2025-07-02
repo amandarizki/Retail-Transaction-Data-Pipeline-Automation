@@ -37,18 +37,18 @@ The pipeline includes:
 
 ---
 
-## 🗄Dataset
+## Dataset
 
 **Retail Transaction Dataset**  
 [Kaggle - Retail Transaction Dataset](https://www.kaggle.com/datasets/fahadrehman07/retail-transaction-dataset)
 
 Features:
-- >10 columns combining categorical and numeric fields.
-- Columns with mixed-case naming (e.g., `StoreLocation`, `ProductCategory`, `DiscountApplied(%)`).
-- Records of transactions including date, payment method, quantities, and discounts.
+* >10 columns combining categorical and numeric fields.
+* Columns with mixed-case naming (e.g., `StoreLocation`, `ProductCategory`, `DiscountApplied(%)`).
+* Records of transactions including date, payment method, quantities, and discounts.
 
 
-## ⚙Pipeline Components
+## Pipeline Components
 
 ### 1. Extract
 
@@ -113,7 +113,7 @@ Performed validations:
   * Between 09:10–09:30 AM
   * Every 10 minutes
 
-📝 **You can customize:**
+**You can customize:**
 
 * **DAG ID** in `DAG.py`:
 
@@ -169,7 +169,7 @@ pip install pyspark apache-airflow pymongo great_expectations
 
 ---
 
-### ⚙Airflow Setup
+### Airflow Setup
 
 1. **Initialize and start Airflow:**
 
