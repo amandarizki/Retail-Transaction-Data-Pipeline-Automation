@@ -20,13 +20,13 @@ The pipeline includes:
 
 .
 ├── Information.md                     # Dataset description and link
-├── Data\_Raw\.csv                       # Raw dataset
+├── Data_Raw.csv                       # Raw dataset
 ├── Extract.py                         # Extract script
 ├── Transform.py                       # Transform script
 ├── Load.py                            # Load script (safe with env variable)
 ├── DAG.py                             # Airflow DAG definition
 ├── GX.ipynb                           # Data exploration & validation notebook
-├── Airflow\.png                        # Airflow DAG execution screenshot
+├── Airflow.png                        # Airflow DAG execution screenshot
 ├── MongoDB.png                        # Screenshot of data loaded into MongoDB
 └── README.md                          # Project documentation
 
