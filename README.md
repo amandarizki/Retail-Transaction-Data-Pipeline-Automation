@@ -17,13 +17,13 @@ The pipeline includes:
 
 .
 ├── Information.md                     # Dataset description and link
-├── P2M3\_Amanda-Rizki\_data\_raw\.csv     # Raw dataset
-├── extract.py                         # Extract script
-├── transform.py                       # Transform script
-├── load.py                            # Load script (safe with env variable)
+├── Data_Raw.csv                       # Raw dataset
+├── Extract.py                         # Extract script
+├── Transform.py                       # Transform script
+├── Load.py                            # Load script (safe with env variable)
 ├── DAG.py                             # Airflow DAG definition
 ├── GX.ipynb                           # Data exploration & validation notebook
-├── P2M3\_Amanda-Rizki\_DAG\_graph.jpg    # Airflow DAG execution screenshot
+├── DAG.jpg                            # Airflow DAG execution screenshot
 └── README.md                          # Project documentation
 
 ````
