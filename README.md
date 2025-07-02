@@ -43,7 +43,7 @@ The pipeline includes:
 [Kaggle - Retail Transaction Dataset](https://www.kaggle.com/datasets/fahadrehman07/retail-transaction-dataset)
 
 Features:
-* >10 columns combining categorical and numeric fields.
+* More thab 10 columns combining categorical and numeric fields.
 * Columns with mixed-case naming (e.g., `StoreLocation`, `ProductCategory`, `DiscountApplied(%)`).
 * Records of transactions including date, payment method, quantities, and discounts.
 
