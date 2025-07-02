@@ -1,5 +1,7 @@
-# Retail-Transaction-Data-Pipeline-Automation
+# Retail Transaction Data Pipeline Automation
+
 This project implements a complete ETL (Extract, Transform, Load) automation pipeline for a retail transaction dataset using **PySpark**, **Apache Airflow**, and **MongoDB**.
+
 
 ## Overview
 
@@ -11,22 +13,26 @@ The pipeline includes:
 - **Loading** into MongoDB.
 - **Workflow orchestration** via Airflow.
 
+
 ## Project Structure
 
 ```
 
 .
 ├── Information.md                     # Dataset description and link
-├── Data_Raw.csv                       # Raw dataset
+├── Data\_Raw\.csv                       # Raw dataset
 ├── Extract.py                         # Extract script
 ├── Transform.py                       # Transform script
 ├── Load.py                            # Load script (safe with env variable)
 ├── DAG.py                             # Airflow DAG definition
 ├── GX.ipynb                           # Data exploration & validation notebook
-├── DAG.jpg                            # Airflow DAG execution screenshot
+├── Airflow\.png                        # Airflow DAG execution screenshot
+├── MongoDB.png                        # Screenshot of data loaded into MongoDB
 └── README.md                          # Project documentation
 
 ````
+
+
 
 ## Objectives
 
@@ -35,7 +41,7 @@ The pipeline includes:
 - Load clean data into a NoSQL database.
 - Enable scheduled, repeatable data ingestion.
 
----
+
 
 ## Dataset
 
@@ -43,9 +49,9 @@ The pipeline includes:
 [Kaggle - Retail Transaction Dataset](https://www.kaggle.com/datasets/fahadrehman07/retail-transaction-dataset)
 
 Features:
-* More thab 10 columns combining categorical and numeric fields.
-* Columns with mixed-case naming (e.g., `StoreLocation`, `ProductCategory`, `DiscountApplied(%)`).
-* Records of transactions including date, payment method, quantities, and discounts.
+- More than 10 columns combining categorical and numeric fields.
+- Columns with mixed-case naming (e.g., `StoreLocation`, `ProductCategory`, `DiscountApplied(%)`).
+- Records of transactions including date, payment method, quantities, and discounts.
 
 
 ## Pipeline Components
@@ -82,7 +88,6 @@ Example usage:
 export MONGO_URI="mongodb+srv://<username>:<password>@<cluster>.mongodb.net/"
 ````
 
-
 ### 4. Validation
 
 **Notebook:** `GX.ipynb`
@@ -95,8 +100,6 @@ Performed validations:
 * Data type checks.
 * String length and regex validations.
 * Date format checks.
-
----
 
 ### 5. Orchestration
 
@@ -121,15 +124,13 @@ Performed validations:
   dag_id='milestone3_schedule'
   ```
 
-  > Change e.g. `milestone3_schedule` to any unique name.
+  > Change to any unique name.
 
 * **Description**:
 
   ```python
-  description='ETL pipeline for crypto data every Saturday...'
+  description='ETL pipeline for retail transaction dataset'
   ```
-
-  > You can update the description to match your dataset.
 
 * **Script paths**:
 
@@ -141,21 +142,8 @@ Performed validations:
 
 * **File names**:
 
-  * Raw dataset file:
-
-    ```
-    Data_Raw.csv
-    ```
-  * Notebook file:
-
-    ```
-    GX.ipynb
-    ```
-  * DAG graph screenshot:
-
-    ```
-    DAG.jpg
-    ```
+  * Raw dataset file: `Data_Raw.csv`
+  * Notebook file: `GX.ipynb`
 
 ## How to Run
 
@@ -166,8 +154,6 @@ Install dependencies:
 ```bash
 pip install pyspark apache-airflow pymongo great_expectations
 ```
-
----
 
 ### Airflow Setup
 
@@ -184,17 +170,16 @@ pip install pyspark apache-airflow pymongo great_expectations
 3. **Enable the DAG:**
 
    * Turn on the `milestone3_schedule` DAG.
-     *If you renamed the DAG ID, look for your new DAG name.*
+   * If you renamed the DAG ID, look for your new DAG name.
 
 4. **Run or wait for schedule:**
 
    * You can trigger manually or wait for the scheduled execution.
 
----
 
 ### MongoDB Connection
 
-Before running `load.py`, **set your MongoDB URI as an environment variable:**
+Before running `Load.py`, **set your MongoDB URI as an environment variable:**
 
 **Linux/macOS:**
 
@@ -208,6 +193,7 @@ export MONGO_URI="mongodb+srv://<username>:<password>@<cluster>.mongodb.net/"
 setx MONGO_URI "mongodb+srv://<username>:<password>@<cluster>.mongodb.net/"
 ```
 
+
 ## Author
 
 Amanda Rizki Koreana
@@ -215,5 +201,3 @@ Amanda Rizki Koreana
 ---
 
 *This project was developed to practice data engineering and analytics workflows.*
-
-```
